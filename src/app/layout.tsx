@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className='h-screen w-screen'>
+    <html lang="en" className="text-white bg-slate-800">
       <body>
         <Header />
         {children}
