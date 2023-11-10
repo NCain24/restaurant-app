@@ -1,0 +1,39 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "La Petite Brasserie",
+      "description": "Classic French cuisine with a modern twist.",
+      "menu": ["Coq au Vin", "Ratatouille", "Crème Brûlée"],
+      "imageUrl": "la-petite-brasserie.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Tokyo Sushi Haven",
+      "description": "Authentic Japanese sushi and sashimi experience.",
+      "menu": ["Nigiri Platter", "Dragon Roll", "Miso Soup"],
+      "imageUrl": "tokyo-sushi-haven.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Mamma Mia Pizzeria",
+      "description": "Italian-style pizzas baked to perfection.",
+      "menu": ["Margherita", "Quattro Formaggi", "Tiramisu"],
+      "imageUrl": "mamma-mia-pizzeria.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Spice of India",
+      "description": "Rich and flavorful Indian dishes for spice enthusiasts.",
+      "menu": ["Chicken Tikka Masala", "Palak Paneer", "Gulab Jamun"],
+      "imageUrl": "spice-of-india.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Seoul BBQ House",
+      "description": "Korean BBQ with a variety of marinated meats.",
+      "menu": ["Bulgogi", "Kimchi Fried Rice", "Matcha Ice Cream"],
+      "imageUrl": "seoul-bbq-house.jpg"
+    }
+  ]
+}
