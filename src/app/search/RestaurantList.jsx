@@ -9,10 +9,18 @@ const RestaurantList = async () => {
   return (
     <>
       {restaurants.map((restaurant) => (
-        <div key={restaurant.id} className="grid grid-cols-2 w-[20%] border rounded-lg gap-4 px-4 py-6">
+        <div
+          key={restaurant.id}
+          className="grid grid-cols-3 w-[20%] border rounded-lg gap-4 px-4 py-6"
+        >
+          {console.log(restaurant)}
           <h3 className="text-2xl">{restaurant.name}</h3>
           <p className="w-[40%]">{restaurant.description}</p>
-          <div>{restaurant.imageUrl}</div>
+          <ul>
+            {restaurant?.tags?.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
         </div>
       ))}
       {restaurants.length === 0 && (
