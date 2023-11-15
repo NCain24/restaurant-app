@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .restaurant {
-  @apply flex justify-center flex-wrap max-w-[1197px] gap-20 after:content-[''];
+  @apply flex border justify-start flex-wrap max-w-[1197px] gap-20 after:content-[''];
 }
