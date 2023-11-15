@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.restaurant {
+  @apply flex justify-center flex-wrap max-w-[1197px] gap-20 after:content-[''];
+}
