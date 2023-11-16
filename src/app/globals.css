@@ -3,5 +3,37 @@
 @tailwind utilities;
 
 .restaurant {
-  @apply flex border justify-start flex-wrap max-w-[1197px] gap-20 after:content-[''];
+  @apply flex justify-center flex-wrap max-w-[1197px] gap-20 after:content-[''] md:text-sm;
+}
+
+.card_map {
+  @apply flex bg-zinc-300 rounded-lg max-h-[322px] h-[322px] max-w-[345px];
+}
+
+.card_container {
+  @apply flex flex-col rounded-lg;
+}
+
+.restaurant_image {
+  @apply w-full h-[140px] rounded-lg border-black;
+}
+
+.card_text {
+  @apply flex flex-col p-4;
+}
+
+.restaurant_name {
+  @apply mb-2 text-black text-2xl font-normal font-['Arial'] capitalize;
+}
+
+.restaurant_desc {
+  @apply h-8 text-black text-opacity-60 text-sm font-normal font-['Arial'] capitalize leading-tight;
+}
+
+.card_footer {
+  @apply flex items-end pl-4 h-14;
+}
+
+.learn_more_btn {
+  @apply text-blue-700 text-base font-normal font-['Arial'] uppercase cursor-pointer;
 }

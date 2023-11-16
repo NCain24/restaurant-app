@@ -6,26 +6,26 @@ const RestaurantList = ({ restaurants }) => {
       {restaurants.map((restaurant) => (
         <div
           key={restaurant.id}
-          className="flex bg-zinc-300 rounded-lg max-h-[322px] h-[322px] max-w-[345px]"
+          className="card_map"
         >
-          <div className="flex flex-col rounded-lg">
+          <div className="card_container">
             <Image
               alt=""
-              className="w-full h-[140px] rounded-lg border-black"
+              className="restaurant_image"
               src=""
               width={345}
               height={140}
             />
-            <div className="flex flex-col p-4">
-              <div className="mb-2 text-black text-2xl font-normal font-['Arial'] capitalize">
+            <div className="card_text">
+              <div className="restaurant_name">
                 {restaurant.name}
               </div>
-              <div className=" h-8 text-black text-opacity-60 text-sm font-normal text font-['Arial'] capitalize leading-tight">
+              <div className="restaurant_desc">
                 {restaurant.description}
               </div>
             </div>
-            <div className="flex items-end pl-4 h-14">
-              <div className=" text-blue-700 text-base font-normal font-['Arial'] uppercase">
+            <div className="card_footer">
+              <div className="learn_more_btn">
                 Learn More
               </div>
             </div>
