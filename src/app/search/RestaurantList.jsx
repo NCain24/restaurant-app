@@ -1,32 +1,41 @@
-async function getRestaurants() {
-  const res = await fetch('http://localhost:4000/restaurants');
-  return res.json();
-}
+import Image from 'next/image';
 
-const RestaurantList = async () => {
-  const restaurants = await getRestaurants();
-
+const RestaurantList = ({ restaurants }) => {
   return (
-    <>
+    <div className="restaurant">
       {restaurants.map((restaurant) => (
         <div
           key={restaurant.id}
-          className="grid grid-cols-3 w-[20%] border rounded-lg gap-4 px-4 py-6"
+          className="card_map"
         >
-          {console.log(restaurant)}
-          <h3 className="text-2xl">{restaurant.name}</h3>
-          <p className="w-[40%]">{restaurant.description}</p>
-          <ul>
-            {restaurant?.tags?.map((tag) => (
-              <li key={tag}>{tag}</li>
-            ))}
-          </ul>
+          <div className="card_container">
+            <Image
+              alt=""
+              className="restaurant_image"
+              src=""
+              width={345}
+              height={140}
+            />
+            <div className="card_text">
+              <div className="restaurant_name">
+                {restaurant.name}
+              </div>
+              <div className="restaurant_desc">
+                {restaurant.description}
+              </div>
+            </div>
+            <div className="card_footer">
+              <div className="learn_more_btn">
+                Learn More
+              </div>
+            </div>
+          </div>
         </div>
       ))}
       {restaurants.length === 0 && (
         <p>Begin searching for a restaurant to populate the list.</p>
       )}
-    </>
+    </div>
   );
 };
 

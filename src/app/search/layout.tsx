@@ -2,7 +2,7 @@ import React from 'react'
 
 const layout = ({children}: any) => {
   return (
-    <div>{children}</div>
+    <div className='flex justify-center h-full'>{children}</div>
   )
 }
 
