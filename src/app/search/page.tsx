@@ -20,14 +20,12 @@ const SearchPage = () => {
     if (response.ok) {
       // Filter restaurants and setFilteredRestaurants.
       const responseJson = await response.json();
-      console.log(responseJson);
 
       const restaurants = responseJson.filter(
         (restaurant: { tags: string[] }) =>
           restaurant?.tags.includes(searchTerm.toLowerCase())
       );
 
-      console.log(restaurants);
       setFilteredRestaurants(restaurants);
     }
   };
