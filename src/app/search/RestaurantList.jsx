@@ -1,4 +1,7 @@
+import DevServer from 'next/dist/server/dev/next-dev-server';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import { isCallLikeExpression } from 'typescript';
 
 const RestaurantList = ({ restaurants }) => {
   return (
