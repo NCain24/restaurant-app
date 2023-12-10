@@ -1,17 +1,25 @@
-import React from 'react';
 import Link from 'next/link';
-import NavMenu from './NavMenu';
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  Input,
+} from '@nextui-org/react';
+import HeaderAuth from './HeaderAuth';
 
 const Header = () => {
   return (
-    <div className="flex h-[5%] justify-between">
-      <Link className="font-['Josefin_Slab'] font-extrabold text-3xl" href="/">
-        Restaurant App
-      </Link>
-      <div className='flex justify-center items-center pr-6'>
-        <NavMenu />
-      </div>
-    </div>
+    <Navbar>
+      <NavbarBrand>
+        <Link href="/" className="font-mono text-xl">
+          <span className='text-orange-400'>NEXT</span> Restaurant App
+        </Link>
+      </NavbarBrand>
+      <NavbarContent justify='end'>
+        <HeaderAuth />
+      </NavbarContent>
+    </Navbar>
   );
 };
 

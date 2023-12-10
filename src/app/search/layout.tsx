@@ -1,8 +1,6 @@
-import React from 'react'
-
 const layout = ({children}: any) => {
   return (
-    <div className='flex justify-center h-full'>{children}</div>
+    <div className='flex font-mono justify-center h-full'>{children}</div>
   )
 }
 
