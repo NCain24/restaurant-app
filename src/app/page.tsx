@@ -1,31 +1,22 @@
-import Link from 'next/link';
-import { getServerSession } from 'next-auth';
-import { redirect } from 'next/navigation';
+'use client';
 
-const HomePage = async () => {
-  const session = await getServerSession();
+import { useSession } from 'next-auth/react';
+import Link from 'next/link';
+
+const HomePage = () => {
+  const { data: session } = useSession();
+
   return (
-    <div className="flex items-center justify-center flex-col h-[95vh]">
-      <h2 className="font-['Arial'] uppercase text-xl">
-        Find your next meal here
-      </h2>
-      {!session && (
-        <Link
-          className="border-2 rounded-full py-2 px-6 border-red-200"
-          href="/api/auth/signin"
-        >
-          Login
-        </Link>
-      )}
-      {session && (
-        <Link
-        className="border-2 rounded-full py-2 px-6 border-red-200"
-        href="/search"
-      >
-        Search
-      </Link>
-      )}
-      
+    <div className="h-[40vh] font-mono pt-10 text-center">
+      <div>
+        <h1 className="text-4xl">
+          Your <span className="text-orange-400">NEXT</span> meal awaits you...
+        </h1>
+        <div className='pt-10'>
+        {session && <Link className='border-2 rounded-lg py-2 px-4' href='/search'>Begin your search.</Link>}
+
+        </div>
+      </div>
     </div>
   );
 };
