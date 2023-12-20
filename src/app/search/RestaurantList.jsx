@@ -33,7 +33,7 @@ const RestaurantList = ({ restaurants }) => {
         </div>
       ))}
       {restaurants.length === 0 && (
-        <p>Search for a restaurant to populate the list.</p>
+        <p>Begin searching for a restaurant to populate the list.</p>
       )}
     </div>
   );
