@@ -10,7 +10,7 @@ const HomePage = () => {
     <div className="h-[40vh] font-mono pt-10 text-center">
       <div>
         <h1 className="text-4xl">
-          Your <span className="text-orange-400">NEXT</span> meal awaits you...
+          Your next meal awaits you...
         </h1>
         <div className='pt-10'>
         {session && <Link className='border-2 rounded-lg py-2 px-4' href='/search'>Begin your search.</Link>}
