@@ -3,12 +3,12 @@ import HeaderAuth from './HeaderAuth';
 
 const Header = () => {
   return (
-    <>
+    <div className='flex justify-between items-center p-4 mb-20'>
       <Link href="/" className="font-mono text-xl">
         Restaurant App
       </Link>
-      <HeaderAuth />
-    </>
+      <HeaderAuth className="ml-auto" />
+    </div>
   );
 };
 
