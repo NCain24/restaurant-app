@@ -14,7 +14,6 @@ const SearchPage = () => {
 
   if (status === 'unauthenticated') {
     redirect('/');
-    // return <p className='pt-20 text-xl'>Please sign in or sign up</p>
   }
 
   const handleSearchInput = (term: any) => {
