@@ -1,17 +1,22 @@
+'use client';
+
+import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 
 const HomePage = () => {
+  const { data: session } = useSession();
+
   return (
-    <div className="flex items-center justify-center flex-col h-[95vh]">
-      <h2 className="font-['Arial'] uppercase text-xl">
-        Find your next meal here
-      </h2>
-      <Link
-        className="border-2 rounded-full py-2 px-6 border-red-200"
-        href="/search"
-      >
-        Search
-      </Link>
+    <div className="h-[40vh] font-mono pt-10 text-center">
+      <div>
+        <h1 className="text-4xl">
+          Your next meal awaits you...
+        </h1>
+        <div className='pt-10'>
+        {session && <Link className='border-2 rounded-lg py-2 px-4' href='/search'>Begin your search.</Link>}
+
+        </div>
+      </div>
     </div>
   );
 };

@@ -3,10 +3,18 @@
 import React, { useState } from 'react';
 import RestaurantList from './RestaurantList';
 import SearchBar from '../components/SearchBar';
+import { useSession } from 'next-auth/react';
+import { redirect } from 'next/navigation';
 
 const SearchPage = () => {
+  const { data: session, status } = useSession();
+
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+
+  if (status === 'unauthenticated') {
+    redirect('/');
+  }
 
   const handleSearchInput = (term: any) => {
     setSearchTerm(term);

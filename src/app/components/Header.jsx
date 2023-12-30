@@ -1,12 +1,13 @@
-import React from 'react';
 import Link from 'next/link';
+import HeaderAuth from './HeaderAuth';
 
 const Header = () => {
   return (
-    <div className="h-[5vh]">
-      <Link className="font-['Josefin_Slab'] font-extrabold text-3xl" href="/">
+    <div className='flex justify-between items-center p-4 mb-20'>
+      <Link href="/" className="font-mono text-xl">
         Restaurant App
       </Link>
+      <HeaderAuth className="ml-auto" />
     </div>
   );
 };
